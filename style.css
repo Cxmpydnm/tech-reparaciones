@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  color: white;
+  background: black;
+}
+
+/* LOGO */
+.logo-img {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.logo-img img {
+  width: 160px;
+  filter: drop-shadow(0 0 8px rgba(0,255,204,0.6));
+}
+
+/* NAV */
+.nav-pro {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+}
+
+.nav-pro button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ICONOS */
+.nav-icon {
+  width: 120px;
+  transition: 0.3s;
+}
+
+.nav-icon:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px #00ffcc);
+}
+
+/* SECCIONES */
+section {
+  display: none;
+  min-height: 100vh;
+  padding: 40px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.active {
+  display: block;
+}
+
+/* FONDOS */
+#inicio {
+  background-image: url("images/inicio.jpg");
+  background-size: contain;
+  background-color: black;
+}
+
+#switch { background-image: url("images/switch.jpg"); background-size: cover; }
+#pc { background-image: url("images/pc.jpg"); background-size: cover; }
+#r36s { background-image: url("images/r36s.jpg"); background-size: cover; }
+#donacion { background-image: url("images/paypal.jpg"); background-size: cover; }
+
+/* OSCURECER */
+section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+section * {
+  position: relative;
+  z-index: 1;
+}
+
+/* TEXTO */
+.hero-text {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.hero-text h2 {
+  font-size: 40px;
+  color: #00ffcc;
+  text-shadow: 0 0 20px #00ffcc;
+}
+
+/* DESCRIPCIONES */
+.desc {
+  font-size: 14px;
+  color: #ccc;
+  margin: 10px 0 15px;
+  line-height: 1.5;
+}
+
+/* PANEL */
+.panel-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 150px;
+  flex-wrap: wrap;
+}
+
+.panel {
+  width: 300px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.4);
+}
+
+/* COLORES */
+.red { border: 2px solid red; box-shadow: 0 0 20px red; }
+.blue { border: 2px solid #00ccff; box-shadow: 0 0 20px #00ccff; }
+
+/* PAYPAL NEON */
+.panel.neon {
+  border: 2px solid #00aaff;
+  box-shadow: 0 0 25px #00aaff;
+  background: rgba(0,0,0,0.3);
+}
+
+/* TEXTO DONACION */
+.donation-text {
+  font-size: 15px;
+  color: #ddd;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+/* BOTONES */
+.btn {
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #00ffcc;
+  color: black;
+}
