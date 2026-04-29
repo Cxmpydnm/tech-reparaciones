@@ -72,13 +72,13 @@ section {
 #r36s { background-image: url("images/r36s.jpg"); background-size: cover; }
 #donacion { background-image: url("images/paypal.jpg"); background-size: cover; background-position: center; }
 
-/* OSCURECER */
+/* OSCURECER (menos fuerte para ver neon) */
 section::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.3);
   top: 0;
   left: 0;
   z-index: 0;
@@ -131,34 +131,48 @@ section * {
   padding: 30px;
   text-align: center;
   border-radius: 15px;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.2);
   backdrop-filter: blur(6px);
   transition: 0.3s;
 }
 
+/* HOVER */
 .panel:hover {
   transform: translateY(-5px);
 }
 
-/* COLORES NEON */
+/* 🔥 NEON MEJORADO (VISIBLE EN PC) */
 .red {
   border: 2px solid red;
-  box-shadow: 0 0 15px red, 0 0 30px red;
+  box-shadow:
+    0 0 20px red,
+    0 0 40px red,
+    0 0 80px red;
 }
 
 .blue {
   border: 2px solid #00ccff;
-  box-shadow: 0 0 15px #00ccff, 0 0 30px #00ccff;
+  box-shadow:
+    0 0 20px #00ccff,
+    0 0 40px #00ccff,
+    0 0 80px #00ccff;
 }
 
 .purple {
   border: 2px solid #cc00ff;
-  box-shadow: 0 0 15px #cc00ff, 0 0 30px #cc00ff;
+  box-shadow:
+    0 0 20px #cc00ff,
+    0 0 40px #cc00ff,
+    0 0 80px #cc00ff;
 }
 
+/* PAYPAL */
 .panel.neon {
   border: 2px solid #00aaff;
-  box-shadow: 0 0 20px #00aaff, 0 0 40px #00aaff;
+  box-shadow:
+    0 0 20px #00aaff,
+    0 0 40px #00aaff,
+    0 0 80px #00aaff;
 }
 
 /* BOTONES */
@@ -185,30 +199,24 @@ section * {
   margin: 15px 0;
 }
 
-/* 📱 MODO MOVIL */
+/* 📱 MÓVIL */
 @media (max-width: 768px) {
 
-  /* 🔥 LOGO ARREGLADO */
+  /* LOGO */
   .logo-img {
     position: relative;
     top: 0;
     left: 0;
     text-align: center;
-    margin-top: 10px;
   }
 
   .logo-img img {
     width: 120px;
   }
 
-  /* NAV */
+  /* ICONOS */
   .nav-icon {
     width: 70px;
-  }
-
-  /* ESPACIO ARRIBA */
-  section {
-    padding-top: 20px;
   }
 
   /* PANEL */
@@ -240,5 +248,4 @@ section * {
   .btn {
     width: 100%;
   }
-
 }
