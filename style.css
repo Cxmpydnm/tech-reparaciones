@@ -249,3 +249,18 @@ section * {
     width: 100%;
   }
 }
+
+/* 📱 FONDOS MÓVIL */
+@media (max-width: 768px) {
+
+  #switch,
+  #pc,
+  #r36s,
+  #donacion {
+    background-size: contain; /* 🔥 NO SE CORTA */
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: black; /* relleno */
+  }
+
+}
