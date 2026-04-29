@@ -4,4 +4,9 @@ function showSection(id) {
   });
 
   document.getElementById(id).classList.add("active");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 }
