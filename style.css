@@ -67,26 +67,10 @@ section {
   background-color: black;
 }
 
-#switch {
-  background-image: url("images/switch.jpg");
-  background-size: cover;
-}
-
-#pc {
-  background-image: url("images/pc.jpg");
-  background-size: cover;
-}
-
-#r36s {
-  background-image: url("images/r36s.jpg");
-  background-size: cover;
-}
-
-#donacion {
-  background-image: url("images/paypal.jpg");
-  background-size: cover;
-  background-position: center;
-}
+#switch { background-image: url("images/switch.jpg"); background-size: cover; }
+#pc { background-image: url("images/pc.jpg"); background-size: cover; }
+#r36s { background-image: url("images/r36s.jpg"); background-size: cover; }
+#donacion { background-image: url("images/paypal.jpg"); background-size: cover; background-position: center; }
 
 /* OSCURECER */
 section::before {
@@ -132,13 +116,13 @@ section * {
   line-height: 1.5;
 }
 
-/* 🔥 PANEL CONTENEDOR (ARREGLADO) */
+/* PANEL CONTENEDOR */
 .panel-container {
   display: flex;
   justify-content: center;
   gap: 25px;
   margin-top: 100px;
-  flex-wrap: wrap; /* 🔥 CLAVE PARA MÓVIL */
+  flex-wrap: wrap;
 }
 
 /* PANEL */
@@ -147,30 +131,34 @@ section * {
   padding: 30px;
   text-align: center;
   border-radius: 15px;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(5px);
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px);
+  transition: 0.3s;
 }
 
-/* COLORES */
+.panel:hover {
+  transform: translateY(-5px);
+}
+
+/* COLORES NEON */
 .red {
   border: 2px solid red;
-  box-shadow: 0 0 20px red;
+  box-shadow: 0 0 15px red, 0 0 30px red;
 }
 
 .blue {
   border: 2px solid #00ccff;
-  box-shadow: 0 0 20px #00ccff;
+  box-shadow: 0 0 15px #00ccff, 0 0 30px #00ccff;
 }
 
 .purple {
   border: 2px solid #cc00ff;
-  box-shadow: 0 0 20px #cc00ff;
+  box-shadow: 0 0 15px #cc00ff, 0 0 30px #cc00ff;
 }
 
-/* PAYPAL */
 .panel.neon {
   border: 2px solid #00aaff;
-  box-shadow: 0 0 25px #00aaff;
+  box-shadow: 0 0 20px #00aaff, 0 0 40px #00aaff;
 }
 
 /* BOTONES */
@@ -190,25 +178,44 @@ section * {
   box-shadow: 0 0 15px #00ffcc;
 }
 
-/* DONACION TEXTO */
+/* DONACION */
 .donation-text {
   font-size: 15px;
   color: #ddd;
   margin: 15px 0;
-  line-height: 1.6;
 }
 
-/* 📱 RESPONSIVE MOVIL */
+/* 📱 MODO MOVIL */
 @media (max-width: 768px) {
 
+  /* 🔥 LOGO ARREGLADO */
+  .logo-img {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .logo-img img {
+    width: 120px;
+  }
+
+  /* NAV */
   .nav-icon {
     width: 70px;
   }
 
+  /* ESPACIO ARRIBA */
+  section {
+    padding-top: 20px;
+  }
+
+  /* PANEL */
   .panel-container {
     flex-direction: column;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 40px;
   }
 
   .panel {
@@ -216,8 +223,9 @@ section * {
     max-width: 320px;
   }
 
+  /* TEXTO */
   .hero-text {
-    margin-top: 120px;
+    margin-top: 80px;
   }
 
   .hero-text h2 {
@@ -228,7 +236,9 @@ section * {
     font-size: 14px;
   }
 
+  /* BOTON */
   .btn {
     width: 100%;
   }
+
 }
