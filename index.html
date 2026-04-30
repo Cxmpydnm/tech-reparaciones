@@ -70,7 +70,7 @@
       </button>
     </div>
 
-    <!-- 🔥 PANEL TUTORIALES -->
+    <!-- TUTORIALES -->
     <div class="panel purple">
       <h2>TUTORIALES</h2>
 
@@ -79,18 +79,21 @@
       </p>
 
       <button class="btn"
-        onclick="window.open('https://www.youtube.com/watch?v=Rf7Wqr2uqqs&t=23s')">
-        Instalacion Magia 22.1.0
+        onclick="window.open('https://youtube.com/watch?v=VIDEO1')">
+        INSTALACIÓN INICIAL
       </button>
 
-      <!-- <button class="btn"
+      <!-- 🔒 OCULTO HASTA TENER VIDEO -->
+      <!--
+      <button class="btn"
         onclick="window.open('https://youtube.com/watch?v=VIDEO2')">
         SOLUCIÓN DE ERRORES
-      </button> -->
+      </button>
+      -->
 
       <button class="btn"
-        onclick="window.open(https://www.youtube.com/watch?v=CJC5O4Umk6I')">
-        Tienda tinfoil
+        onclick="window.open('https://youtube.com/watch?v=VIDEO3')">
+        ACTUALIZAR SISTEMA
       </button>
 
     </div>
@@ -138,7 +141,167 @@
       <h2>DONACIÓN</h2>
 
       <p class="donation-text">
-        Este proyecto es gratuito.<br>
+        Este proyecto es completamente gratuito.<br>
+        Si quieres apoyar puedes colaborar para seguir mejorando.
+      </p>
+
+      <button class="btn"
+        onclick="window.open('https://www.paypal.me/Cxmpy')">
+        DONAR
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tech Reparaciones</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- LOGO -->
+<div class="logo-img">
+  <img src="images/icons/logo.png">
+</div>
+
+<!-- MENU -->
+<nav class="nav-pro">
+
+  <button onclick="showSection('inicio')">
+    <img src="images/icons/inicio.png" class="nav-icon">
+  </button>
+
+  <button onclick="showSection('switch')">
+    <img src="images/icons/switch.png" class="nav-icon">
+  </button>
+
+  <button onclick="showSection('pc')">
+    <img src="images/icons/pc.png" class="nav-icon">
+  </button>
+
+  <button onclick="showSection('r36s')">
+    <img src="images/icons/r36s.png" class="nav-icon">
+  </button>
+
+  <button onclick="showSection('donacion')">
+    <img src="images/icons/paypal.png" class="nav-icon">
+  </button>
+
+</nav>
+
+<!-- INICIO -->
+<section id="inicio" class="active">
+  <div class="hero-text">
+    <h2>Soluciones Gaming Profesionales</h2>
+    <p>Firmware, packs y herramientas para Switch, PC y R36S.</p>
+  </div>
+</section>
+
+<!-- SWITCH -->
+<section id="switch">
+  <div class="panel-container">
+
+    <div class="panel red">
+      <h2>FIRMWARE</h2>
+      <p class="desc">Última actualización del sistema de Nintendo Switch.</p>
+      <button class="btn"
+        onclick="window.open('https://mega.nz/file/hEVXSCBa#H_JND66TLxk-r6YcDZrb6mNfSkk3r3DnOZwgQTEBcS0')">
+        DESCARGAR
+      </button>
+    </div>
+
+    <div class="panel blue">
+      <h2>PACK</h2>
+      <p class="desc">Pack completo listo para usar.</p>
+      <button class="btn"
+        onclick="window.open('https://mega.nz/file/kBVnjIzT#BGMqKnOd6YAdMP6CpfzTfP1v_HwNXeFblwYARU-ajvg')">
+        DESCARGAR
+      </button>
+    </div>
+
+    <!-- TUTORIALES -->
+    <div class="panel purple">
+      <h2>TUTORIALES</h2>
+
+      <p class="desc">
+        Guías paso a paso para instalación y configuración.
+      </p>
+
+      <button class="btn"
+        onclick="window.open('https://www.youtube.com/watch?v=Rf7Wqr2uqqs&t=23s')">
+        Actualizacion Magia
+      </button>
+
+      <!-- 🔒 OCULTO HASTA TENER VIDEO -->
+      <!--
+      <button class="btn"
+        onclick="window.open('https://youtube.com/watch?v=VIDEO2')">
+        SOLUCIÓN DE ERRORES
+      </button>
+      -->
+
+      <button class="btn"
+        onclick="window.open('https://www.youtube.com/watch?v=CJC5O4Umk6I')">
+        Instalar Tienda tinfoil
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- PC -->
+<section id="pc">
+  <div class="panel-container">
+
+    <div class="panel blue">
+      <h2>PACK PC</h2>
+      <p class="desc">Optimización y herramientas para mejorar rendimiento.</p>
+      <button class="btn"
+        onclick="window.open('https://mega.nz/file/FA0wCLDJ#bPk0BAzmgXoZUK9DHVB2xSs4L1--NkN-mRJyJTaQNSU')">
+        DESCARGAR
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- R36S -->
+<section id="r36s">
+  <div class="panel-container">
+
+    <div class="panel blue">
+      <h2>PACK R36S</h2>
+      <p class="desc">Pack completo con emuladores y mejoras.</p>
+      <button class="btn"
+        onclick="window.open('https://mega.nz/file/5ANlyRZZ#anojtqerQoGo5cxXmvuJcpPOrld3fqywaYVESTbwnok')">
+        DESCARGAR
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- DONACION -->
+<section id="donacion">
+  <div class="panel-container">
+
+    <div class="panel neon">
+      <h2>DONACIÓN</h2>
+
+      <p class="donation-text">
+        Este proyecto es completamente gratuito.<br>
         Si quieres apoyar puedes colaborar para seguir mejorando.
       </p>
 
