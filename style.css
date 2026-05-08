@@ -1,9 +1,9 @@
-/* GENERAL */
 body {
   margin: 0;
   font-family: Arial;
   color: white;
   background: black;
+  overflow-x: hidden;
 }
 
 /* LOGO */
@@ -20,30 +20,37 @@ body {
   filter: drop-shadow(0 0 8px rgba(0,255,204,0.6));
 }
 
-/* NAV */
+/* MENU */
 .nav-pro {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  align-items: flex-start;
+  gap: 25px;
   padding: 15px;
   flex-wrap: wrap;
+  background: rgba(0,0,0,0.9);
+  position: relative;
+  z-index: 10;
 }
 
 .nav-pro button {
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 
 /* ICONOS */
 .nav-icon {
   width: 120px;
+  height: auto;
+  object-fit: contain;
   transition: 0.3s;
 }
 
 .nav-icon:hover {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 20px #00ffcc);
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 15px #00ffcc);
 }
 
 /* SECCIONES */
@@ -63,22 +70,41 @@ section {
 /* FONDOS */
 #inicio {
   background-image: url("images/inicio.jpg");
-  background-size: contain;
-  background-color: black;
+  background-size: cover;
 }
 
-#switch { background-image: url("images/switch.jpg"); background-size: cover; }
-#pc { background-image: url("images/pc.jpg"); background-size: cover; }
-#r36s { background-image: url("images/r36s.jpg"); background-size: cover; }
-#donacion { background-image: url("images/paypal.jpg"); background-size: cover; background-position: center; }
+#switch {
+  background-image: url("images/switch.jpg");
+  background-size: cover;
+}
 
-/* OSCURECER */
+#pc {
+  background-image: url("images/pc.jpg");
+  background-size: cover;
+}
+
+#r36s {
+  background-image: url("images/r36s.jpg");
+  background-size: cover;
+}
+
+#donacion {
+  background-image: url("images/paypal.jpg");
+  background-size: cover;
+}
+
+#contacto {
+  background-image: url("images/contacto.jpg");
+  background-size: cover;
+}
+
+/* OSCURECER FONDO */
 section::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.55);
   top: 0;
   left: 0;
   z-index: 0;
@@ -92,46 +118,39 @@ section * {
 /* TEXTO */
 .hero-text {
   text-align: center;
-  margin-top: 200px;
+  margin-top: 180px;
 }
 
 .hero-text h2 {
-  font-size: 40px;
+  font-size: 45px;
   color: #00ffcc;
   text-shadow: 0 0 20px #00ffcc;
+  margin-bottom: 20px;
 }
 
 .hero-text p {
   font-size: 18px;
   color: #ddd;
-  max-width: 600px;
-  margin: 20px auto;
-}
-
-/* DESCRIPCIONES */
-.desc {
-  font-size: 14px;
-  color: #ccc;
-  margin: 10px 0 15px;
-  line-height: 1.5;
+  max-width: 700px;
+  margin: auto;
 }
 
 /* PANEL CONTENEDOR */
 .panel-container {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  margin-top: 100px;
+  gap: 35px;
+  margin-top: 120px;
   flex-wrap: wrap;
 }
 
 /* PANEL */
 .panel {
-  width: 260px;
+  width: 320px;
   padding: 30px;
   text-align: center;
-  border-radius: 15px;
-  background: rgba(0,0,0,0.2);
+  border-radius: 18px;
+  background: rgba(0,0,0,0.45);
   backdrop-filter: blur(6px);
   transition: 0.3s;
 }
@@ -140,36 +159,56 @@ section * {
   transform: translateY(-5px);
 }
 
-/* NEON */
+/* COLORES */
 .red {
   border: 2px solid red;
-  box-shadow: 0 0 20px red, 0 0 40px red, 0 0 80px red;
+  box-shadow: 0 0 20px red;
 }
 
 .blue {
   border: 2px solid #00ccff;
-  box-shadow: 0 0 20px #00ccff, 0 0 40px #00ccff, 0 0 80px #00ccff;
+  box-shadow: 0 0 20px #00ccff;
 }
 
 .purple {
   border: 2px solid #cc00ff;
-  box-shadow: 0 0 20px #cc00ff, 0 0 40px #cc00ff, 0 0 80px #cc00ff;
+  box-shadow: 0 0 20px #cc00ff;
 }
 
-.panel.neon {
-  border: 2px solid #00aaff;
-  box-shadow: 0 0 20px #00aaff, 0 0 40px #00aaff, 0 0 80px #00aaff;
+.neon {
+  border: 2px solid #00ffcc;
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+/* TITULOS */
+.panel h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* DESCRIPCIONES */
+.desc,
+.donation-text {
+  font-size: 15px;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 /* BOTONES */
 .btn {
-  padding: 10px 20px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
   font-weight: bold;
+  font-size: 15px;
   cursor: pointer;
   background: transparent;
   border: 2px solid #00ffcc;
   color: #00ffcc;
   transition: 0.3s;
+  border-radius: 8px;
 }
 
 .btn:hover {
@@ -178,79 +217,62 @@ section * {
   box-shadow: 0 0 15px #00ffcc;
 }
 
-/* 🔥 BOTONES EN PANEL TUTORIALES */
-.panel .btn {
-  display: block;
-  width: 100%;
-  margin: 8px 0;
-}
+/* MOVIL */
+@media screen and (max-width: 768px) {
 
-/* DONACION */
-.donation-text {
-  font-size: 15px;
-  color: #ddd;
-  margin: 15px 0;
-}
-
-/* 📱 RESPONSIVE */
-@media (max-width: 768px) {
-
-  /* LOGO */
   .logo-img {
     position: relative;
     top: 0;
     left: 0;
     text-align: center;
+    margin-top: 10px;
   }
 
   .logo-img img {
-    width: 120px;
+    width: 140px;
   }
 
-  /* ICONOS */
+  .nav-pro {
+    gap: 10px;
+    padding: 10px;
+  }
+
   .nav-icon {
-    width: 70px;
+    width: 85px;
   }
 
-  /* PANEL */
+  .hero-text {
+    margin-top: 120px;
+    padding: 20px;
+  }
+
+  .hero-text h2 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+  }
+
   .panel-container {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
+    margin-top: 60px;
+    gap: 20px;
   }
 
   .panel {
     width: 90%;
-    max-width: 320px;
+    padding: 20px;
   }
 
-  /* TEXTO */
-  .hero-text {
-    margin-top: 80px;
+  .panel h2 {
+    font-size: 28px;
   }
 
-  .hero-text h2 {
-    font-size: 26px;
-  }
+}
 
-  .hero-text p {
-    font-size: 14px;
-  }
-
-  /* BOTON */
-  .btn {
-    width: 100%;
-  }
-
-  /* FONDOS MÓVIL (NO SE CORTAN) */
-  #switch,
-  #pc,
-  #r36s,
-  #donacion {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-color: black;
-  }
-
+/* ICONO CONTACTO */
+.nav-pro button:last-child .nav-icon {
+  width: 120px;
+  transform: translateY(-5px);
+  filter: drop-shadow(0 0 10px #00ccff);
 }
