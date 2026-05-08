@@ -38,6 +38,11 @@
     <img src="images/icons/paypal.png" class="nav-icon">
   </button>
 
+  <!-- NUEVO CONTACTO -->
+  <button onclick="showSection('contacto')">
+    <img src="images/icons/contacto.png" class="nav-icon">
+  </button>
+
 </nav>
 
 <!-- INICIO -->
@@ -52,7 +57,6 @@
 <section id="switch">
   <div class="panel-container">
 
-    <!-- FIRMWARE -->
     <div class="panel red">
       <h2>FIRMWARE</h2>
 
@@ -66,7 +70,6 @@
       </button>
     </div>
 
-    <!-- PACK -->
     <div class="panel blue">
       <h2>PACK</h2>
 
@@ -80,7 +83,6 @@
       </button>
     </div>
 
-    <!-- TUTORIALES -->
     <div class="panel purple">
       <h2>TUTORIALES</h2>
 
@@ -122,12 +124,16 @@
       <h2>Archivos Temporales</h2>
 
       <p class="desc">
-        Optimización y herramientas para mejorar rendimiento.
+        Herramientas premium protegidas mediante contraseña.
       </p>
+
+      <button class="btn" onclick="pedirClave()">
+        Optimizar rendimiento
+      </button>
 
       <button class="btn"
         onclick="window.open('https://mega.nz/file/FA0wCLDJ#bPk0BAzmgXoZUK9DHVB2xSs4L1--NkN-mRJyJTaQNSU')">
-        DESCARGAR
+        Borra Archivos Temporales
       </button>
     </div>
 
@@ -139,21 +145,9 @@
         En mantenimiento próximamente.
       </p>
 
-      <!--
-      <button class="btn"
-        onclick="window.open('https://www.microsoft.com/software-download/windows10')">
-        WINDOWS 10
-      </button>
-
-      <button class="btn"
-        onclick="window.open('https://www.microsoft.com/software-download/windows11')">
-        WINDOWS 11
-      </button>
-      -->
-
     </div>
 
-    <!-- 🔥 VIDEO PC -->
+    <!-- VIDEO PC -->
     <div class="panel red">
       <h2>Activar WINDOWS</h2>
 
@@ -212,6 +206,46 @@
 
   </div>
 </section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="panel-container">
+
+    <div class="panel neon">
+      <h2>CONTACTO</h2>
+
+      <p class="donation-text">
+        Solicita la contraseña para acceder<br>
+        a herramientas privadas y premium.
+      </p>
+
+      <button class="btn"
+        onclick="window.location.href='mailto:daviddnm716@gmail.com?subject=Solicitud%20de%20Contraseña'">
+        ENVIAR CORREO
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SCRIPT CONTRASEÑA -->
+<script>
+function pedirClave() {
+
+  let clave = prompt("Introduce la contraseña:");
+
+  if(clave === "Tech2025") {
+
+    window.open('https://mega.nz/file/ZYVEzIpa#6mVxT5QrKTYzJrnIdl9Fhu3uthB2yIWn_ppoIZnQfj8');
+
+  } else {
+
+    alert("Contraseña incorrecta.\nSolicita acceso en CONTACTO.");
+
+  }
+}
+</script>
 
 <script src="script.js"></script>
 
