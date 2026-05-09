@@ -24,7 +24,7 @@ body {
 .nav-pro {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 25px;
   padding: 15px;
   flex-wrap: wrap;
@@ -46,11 +46,27 @@ body {
   height: auto;
   object-fit: contain;
   transition: 0.3s;
+  filter: drop-shadow(0 0 10px transparent);
 }
 
 .nav-icon:hover {
-  transform: scale(1.08);
-  filter: drop-shadow(0 0 15px #00ffcc);
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px #00ffcc);
+}
+
+/* CONTACTO */
+.nav-pro button:last-child .nav-icon {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  transition: 0.3s;
+  transform: scaleX(0.78);
+  filter: drop-shadow(0 0 10px #00ccff);
+}
+
+.nav-pro button:last-child .nav-icon:hover {
+  transform: scaleX(0.78) scale(1.1);
+  filter: drop-shadow(0 0 20px #00ffcc);
 }
 
 /* SECCIONES */
@@ -98,7 +114,7 @@ section {
   background-size: cover;
 }
 
-/* OSCURECER FONDO */
+/* OSCURECER */
 section::before {
   content: "";
   position: absolute;
@@ -241,6 +257,15 @@ section * {
     width: 85px;
   }
 
+  .nav-pro button:last-child .nav-icon {
+    width: 85px;
+    transform: scaleX(0.78);
+  }
+
+  .nav-pro button:last-child .nav-icon:hover {
+    transform: scaleX(0.78) scale(1.1);
+  }
+
   .hero-text {
     margin-top: 120px;
     padding: 20px;
@@ -268,11 +293,4 @@ section * {
     font-size: 28px;
   }
 
-}
-
-/* ICONO CONTACTO */
-.nav-pro button:last-child .nav-icon {
-  width: 120px;
-  transform: translateY(-5px);
-  filter: drop-shadow(0 0 10px #00ccff);
 }
