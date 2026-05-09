@@ -57,6 +57,7 @@
 <section id="switch">
   <div class="panel-container">
 
+    <!-- FIRMWARE -->
     <div class="panel red">
       <h2>FIRMWARE</h2>
 
@@ -70,19 +71,24 @@
       </button>
     </div>
 
+    <!-- PACK -->
     <div class="panel blue">
       <h2>PACK</h2>
 
-      <p class="desc">
-        Pack completo listo para usar.
-      </p>
-
+      <!-- PACK SWITCH -->
       <button class="btn"
         onclick="window.open('https://mega.nz/file/kBVnjIzT#BGMqKnOd6YAdMP6CpfzTfP1v_HwNXeFblwYARU-ajvg')">
-        DESCARGAR
+        Pack Switch
       </button>
+
+      <!-- PACK WII PROTEGIDO -->
+      <button class="btn" onclick="pedirClaveWii()">
+        Pack Wii
+      </button>
+
     </div>
 
+    <!-- TUTORIALES -->
     <div class="panel purple">
       <h2>TUTORIALES</h2>
 
@@ -139,10 +145,10 @@
     <div class="panel purple">
       <h2>ISO WINDOWS</h2>
 
-      <p class="desc">
-        En mantenimiento próximamente.
-      </p>
-
+      <button class="btn"
+      onclick="window.open()">
+    ISO WINDOWS 10
+  </button>
     </div>
 
     <div class="panel red">
@@ -207,7 +213,6 @@
 <!-- CONTACTO -->
 <section id="contacto">
 
-  <!-- FONDO EXTRA -->
   <div class="contacto-bg"></div>
 
   <div class="panel-container">
@@ -230,13 +235,14 @@
   </div>
 </section>
 
-<!-- SCRIPT CONTRASEÑA -->
+<!-- SCRIPT CONTRASEÑAS -->
 <script>
+
 function pedirClave() {
 
   let clave = prompt("Introduce la contraseña:");
 
-  if(clave === "Tech2025") {
+  if(clave === "PC2026") {
 
     window.open('https://mega.nz/file/ZYVEzIpa#6mVxT5QrKTYzJrnIdl9Fhu3uthB2yIWn_ppoIZnQfj8');
 
@@ -246,6 +252,23 @@ function pedirClave() {
 
   }
 }
+
+/* PACK WII */
+function pedirClaveWii() {
+
+  let clave = prompt("Introduce la contraseña para Pack Wii:");
+
+  if(clave === "Wii2026") {
+
+    window.open('https://mega.nz/file/JY9lSJCZ#h4K4rtH-qGLa0HI0v_JO9A_nhw5527bu699hg1Iost0');
+
+  } else {
+
+    alert("Contraseña incorrecta.\nSolicita acceso en CONTACTO.");
+
+  }
+}
+
 </script>
 
 <script src="script.js"></script>
